@@ -1,0 +1,52 @@
+body {
+  padding-top: 60px;
+  background: url('images/ignasi.png')
+}
+.jumbotron {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ccffffff', GradientType=0);
+}
+.jumbotron img {
+  max-width: 200px;
+}
+#return img {
+  width: 50px;
+  /*height: 50px;*/
+}
+.bordercol {
+  border-right: 2px solid darkgray;
+}
+.gap-right {
+  margin-right: 5px;
+  padding-right: 5px;
+}
+.title {
+  margin-top: 0;
+}
+.innerRow {
+  padding: 10px;
+  background-color: rgba(256, 256, 256, 0.4);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.storyDesc {
+  padding-bottom: 5px;
+}
+#return {
+  margin-top: 20px;
+}
+#return .row {
+  margin-bottom: 20px;
+}
+#content .fa {
+  margin-right: 5px;
+  color: gray;
+}
+.title {
+  margin-bottom: 5px;
+}
+.container {
+  max-width: 768px;
+}
