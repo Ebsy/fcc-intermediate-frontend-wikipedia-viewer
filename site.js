@@ -6,15 +6,15 @@ $(document).ready(function() {
   $('#searchText').focus();
 
   $('#search').on('click', function(e) {
-    var text = $('#searchText').val()
+    var text = $('#searchText').val();
     getData(text);
-  })
+  });
 
   $('#searchText').keyup(function(e) {
 
     var empty = false;
     $('#searchText').each(function() {
-      if ($(this).val() == '') {
+      if ($(this).val() === '') {
         empty = true;
       }
     });
@@ -31,7 +31,7 @@ $(document).ready(function() {
       }
     }
   });
-})
+});
 
 function getData(text) {
   var query = wikiapi + text;
@@ -40,8 +40,6 @@ function getData(text) {
 
   $.getJSON(query, function(result) {
     $.each(result.query.pages, function(i, field) {
-      console.log(field);
-      console.log('=-=-=-=-')
       ret += buildResult(field);
     });
 
@@ -49,7 +47,7 @@ function getData(text) {
     $('#return').fadeOut('fast', function() {
       $('#return').html(ret);
       $('#return').fadeIn();
-    })
+    });
   });
 }
 
@@ -61,26 +59,25 @@ function scrollToAnchor(aid) {
 }
 
 function buildResult(result) {
-  console.log(result)
   var thumbnail = '';
   if (result.thumbnail) {
-    thumbnail = result.thumbnail.source
+    thumbnail = result.thumbnail.source;
   } else {
-    thumbnail = 'images/tinyicon.png'
+    thumbnail = 'images/tinyicon.png';
   }
 
   // Mixing JS with HTML? Oh, the humanity! :p
   var html = '';
-  html += '<div class="row">'
-  html += '<div class="innerRow">'
-  html += '<img class="img-responsive img-rounded pull-left gap-right" src="' + thumbnail + '"/>'
-  html += '<h4 class="title">'
-  html += '<a target="_blank" href="' + wikilink + result.pageid + '">'
-  html += result.title
-  html += '</a>'
-  html += '</h4>'
-  html += '<span class="desc">' + result.extract + '</span>'
-  html += '</div>' //second col
-  html += '</div>' //row
-  return html
+  html += '<div class="row">';
+  html += '<div class="innerRow">';
+  html += '<img class="img-responsive img-rounded pull-left gap-right" src="' + thumbnail + '"/>';
+  html += '<h4 class="title">';
+  html += '<a target="_blank" href="' + wikilink + result.pageid + '">';
+  html += result.title;
+  html += '</a>';
+  html += '</h4>';
+  html += '<span class="desc">' + result.extract + '</span>';
+  html += '</div>';
+  html += '</div>';
+  return html;
 }

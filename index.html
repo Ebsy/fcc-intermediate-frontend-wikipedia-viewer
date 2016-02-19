@@ -17,15 +17,33 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand"> <i class="fa fa-fire fa-fw"></i>
-          <span>freeCodeCamp</span>
+        <div class="navbar-brand">
+          <a style="color:#ddd;text-decoration:none;" target="_blank" href="http://www.freecodecamp.com/Ebsy">
+            <span>freeCodeCamp (
+              <i class="fa fa-fire"></i>)</span>
+          </a>
         </div>
       </div>
       <div id="NavBar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a target="_blank" href="https://github.com/Ebsy"><i class="fa fa-github fa-fw"></i><span>GitHub</span></a></li>
-          <li><a target="_blank" href="http://www.facebook.com/neilebrey"><i class="fa fa-facebook-square fa-fw"></i><span>Facebook</span></a></li>
-          <li><a target="_blank" href="mailto:neil.ebrey@gmail.com"><i class="fa fa-google fa-fw"></i><span>Email</span></a></li>
+          <li class="text-center">
+            <a target="_blank" href="https://github.com/Ebsy">
+              <i class="fa fa-github fa-fw"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li class="text-center">
+            <a target="_blank" href="http://www.facebook.com/neilebrey">
+              <i class="fa fa-facebook-square fa-fw"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="text-center">
+            <a target="_blank" href="mailto:neil.ebrey@gmail.com">
+              <i class="fa fa-google fa-fw"></i>
+              <span>Email</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -33,15 +51,17 @@
 
   <div class="container">
     <div class="jumbotron text-center">
-      <img class="img-responsive center-block" src="images/logo.png" alt="">
+      <img class="img-responsive center-block" src="http://rpgvienna.com/fcc/wikipedia-viewer/images/logo.png" alt="">
       <h3>Wikipedia Search</h3>
-      <h4>Use the search box below, or <a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">click here</a> for a random article.</h4>
+      <h4>Use the search box below, or
+        <a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">click here</a> for a random article.</h4>
     </div>
     <div class="input-group">
       <input id="searchText" type="text" class="form-control" required placeholder="Search Wikipedia..." />
       <span class="input-group-btn">
-          <button class="btn btn-primary" id="search" type="button" disabled><i class="fa fa-wikipedia-w fa-fw"></i> Go!</button>
-        </span>
+        <button class="btn btn-primary" id="search" type="button" disabled>
+          <i class="fa fa-wikipedia-w fa-fw"></i> Go!</button>
+      </span>
     </div>
     <div id="return" class="container-fluid">
     </div>
